@@ -28,11 +28,11 @@
             <artifactId>javafaker</artifactId>
             <version>0.12</version>
         </dependency>
-<!--        <dependency>
+        <dependency>
             <groupId>rs2xml</groupId>
             <artifactId>rs2xml</artifactId>
             <version>1.0</version>
-        </dependency>-->
+        </dependency>
         <dependency>
             <groupId>com.toedter</groupId>
             <artifactId>jcalendar</artifactId>
