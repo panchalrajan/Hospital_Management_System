@@ -39,7 +39,7 @@ public class HelpDeskPage extends javax.swing.JFrame {
     }
     
     //Reset the form
-    private void resetAddPatientForm() {
+    private void resetAllForms() {
         firstNameField_.setText(null);
         middleNameField_.setText(null);
         lastNameField_.setText(null);
@@ -55,6 +55,14 @@ public class HelpDeskPage extends javax.swing.JFrame {
         bloodGroupField_.setSelectedIndex(0);
         insuranceCompanyField_.setSelectedIndex(0);
         policyNumberField_.setText(null);
+        
+        firstNameField_3.setText(null);
+        fatherNameField_3.setText(null);
+        middleNameField_3.setText(null);
+        lastNameField_3  .setText(null);     
+        insuranceCompanyField_4.setSelectedIndex(0);
+        insuranceCompanyField_5.setSelectedIndex(0);
+        policyNumberField_5.setText(null);
     }
     
 
@@ -112,6 +120,32 @@ public class HelpDeskPage extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         bookAppointmentTab_ = new javax.swing.JButton();
         parentPanel = new javax.swing.JPanel();
+        bookAppointmentPanel_ = new javax.swing.JPanel();
+        jSeparator9 = new javax.swing.JSeparator();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        firstNameField_3 = new javax.swing.JTextField();
+        jLabel29 = new javax.swing.JLabel();
+        middleNameField_3 = new javax.swing.JTextField();
+        jLabel30 = new javax.swing.JLabel();
+        lastNameField_3 = new javax.swing.JTextField();
+        jLabel31 = new javax.swing.JLabel();
+        fatherNameField_3 = new javax.swing.JTextField();
+        jLabel72 = new javax.swing.JLabel();
+        insuranceCompanyField_4 = new javax.swing.JComboBox<>();
+        jLabel73 = new javax.swing.JLabel();
+        policyNumberField_4 = new javax.swing.JTextField();
+        addPatientButton_4 = new javax.swing.JButton();
+        resetButton_3 = new javax.swing.JButton();
+        jSeparator10 = new javax.swing.JSeparator();
+        insuranceCompanyField_5 = new javax.swing.JComboBox<>();
+        jLabel74 = new javax.swing.JLabel();
+        policyNumberField_5 = new javax.swing.JTextField();
+        jLabel75 = new javax.swing.JLabel();
+        addPatientButton_5 = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        usersList_1 = new javax.swing.JTable();
+        jLabel76 = new javax.swing.JLabel();
         addPatientPanel_ = new javax.swing.JPanel();
         jSeparator2 = new javax.swing.JSeparator();
         jLabel5 = new javax.swing.JLabel();
@@ -148,42 +182,6 @@ public class HelpDeskPage extends javax.swing.JFrame {
         dobField_ = new com.toedter.calendar.JDateChooser();
         resetButton_ = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
-        bookAppointmentPanel_ = new javax.swing.JPanel();
-        jSeparator3 = new javax.swing.JSeparator();
-        jLabel22 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
-        firstNameField_1 = new javax.swing.JTextField();
-        jLabel24 = new javax.swing.JLabel();
-        middleNameField_1 = new javax.swing.JTextField();
-        jLabel25 = new javax.swing.JLabel();
-        lastNameField_1 = new javax.swing.JTextField();
-        jLabel26 = new javax.swing.JLabel();
-        fatherNameField_1 = new javax.swing.JTextField();
-        jLabel27 = new javax.swing.JLabel();
-        genderField_1 = new javax.swing.JComboBox<>();
-        addressField_1 = new javax.swing.JTextField();
-        jLabel28 = new javax.swing.JLabel();
-        jLabel29 = new javax.swing.JLabel();
-        phoneNumberField_1 = new javax.swing.JTextField();
-        jLabel30 = new javax.swing.JLabel();
-        jLabel31 = new javax.swing.JLabel();
-        weightField_1 = new javax.swing.JTextField();
-        jLabel32 = new javax.swing.JLabel();
-        heightField_1 = new javax.swing.JTextField();
-        jLabel33 = new javax.swing.JLabel();
-        bloodGroupField_1 = new javax.swing.JComboBox<>();
-        jLabel34 = new javax.swing.JLabel();
-        insuranceCompanyField_1 = new javax.swing.JComboBox<>();
-        jLabel35 = new javax.swing.JLabel();
-        policyNumberField_1 = new javax.swing.JTextField();
-        addPatientButton_1 = new javax.swing.JButton();
-        jLabel36 = new javax.swing.JLabel();
-        eMailIdField_1 = new javax.swing.JTextField();
-        usernameField_1 = new javax.swing.JTextField();
-        jLabel37 = new javax.swing.JLabel();
-        dobField_1 = new com.toedter.calendar.JDateChooser();
-        resetButton_1 = new javax.swing.JButton();
-        jSeparator4 = new javax.swing.JSeparator();
         managePatientPanel_ = new javax.swing.JPanel();
         jSeparator5 = new javax.swing.JSeparator();
         jLabel38 = new javax.swing.JLabel();
@@ -444,7 +442,7 @@ public class HelpDeskPage extends javax.swing.JFrame {
                     .addComponent(labReportTab_, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(sendAmbulanceTab_, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(bookAppointmentTab_, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
         navBarPanelLayout.setVerticalGroup(
             navBarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -487,6 +485,296 @@ public class HelpDeskPage extends javax.swing.JFrame {
         getContentPane().add(navBarPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, -1));
 
         parentPanel.setLayout(new java.awt.CardLayout());
+
+        bookAppointmentPanel_.setBackground(new java.awt.Color(226, 235, 241));
+        bookAppointmentPanel_.setPreferredSize(new java.awt.Dimension(1050, 800));
+
+        jLabel27.setFont(new java.awt.Font("Algerian", 1, 24)); // NOI18N
+        jLabel27.setForeground(new java.awt.Color(62, 69, 83));
+        jLabel27.setText("book appointment");
+
+        jLabel28.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel28.setForeground(new java.awt.Color(62, 69, 83));
+        jLabel28.setText("PATIENT ID");
+        jLabel28.setPreferredSize(new java.awt.Dimension(100, 20));
+
+        firstNameField_3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        firstNameField_3.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        firstNameField_3.setToolTipText("");
+        firstNameField_3.setBorder(null);
+        firstNameField_3.setPreferredSize(new java.awt.Dimension(250, 35));
+
+        jLabel29.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel29.setForeground(new java.awt.Color(62, 69, 83));
+        jLabel29.setText("LAST NAME");
+        jLabel29.setPreferredSize(new java.awt.Dimension(100, 20));
+
+        middleNameField_3.setEditable(false);
+        middleNameField_3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        middleNameField_3.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        middleNameField_3.setToolTipText("");
+        middleNameField_3.setBorder(null);
+        middleNameField_3.setPreferredSize(new java.awt.Dimension(250, 35));
+
+        jLabel30.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel30.setForeground(new java.awt.Color(62, 69, 83));
+        jLabel30.setText("PHONE NO");
+        jLabel30.setPreferredSize(new java.awt.Dimension(100, 20));
+
+        lastNameField_3.setEditable(false);
+        lastNameField_3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lastNameField_3.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        lastNameField_3.setToolTipText("");
+        lastNameField_3.setBorder(null);
+        lastNameField_3.setPreferredSize(new java.awt.Dimension(250, 35));
+
+        jLabel31.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel31.setForeground(new java.awt.Color(62, 69, 83));
+        jLabel31.setText("FIRST NAME");
+        jLabel31.setPreferredSize(new java.awt.Dimension(100, 20));
+
+        fatherNameField_3.setEditable(false);
+        fatherNameField_3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        fatherNameField_3.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        fatherNameField_3.setToolTipText("");
+        fatherNameField_3.setBorder(null);
+        fatherNameField_3.setPreferredSize(new java.awt.Dimension(250, 35));
+
+        jLabel72.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel72.setForeground(new java.awt.Color(62, 69, 83));
+        jLabel72.setText("WARD TYPE");
+        jLabel72.setPreferredSize(new java.awt.Dimension(100, 20));
+
+        insuranceCompanyField_4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        insuranceCompanyField_4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "<-- SELECT -->", "OPD", "EMERGENCY" }));
+        insuranceCompanyField_4.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                insuranceCompanyField_4ItemStateChanged(evt);
+            }
+        });
+
+        jLabel73.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel73.setForeground(new java.awt.Color(62, 69, 83));
+        jLabel73.setText("FEES TO BE COLLECTED");
+        jLabel73.setPreferredSize(new java.awt.Dimension(100, 20));
+
+        policyNumberField_4.setEditable(false);
+        policyNumberField_4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        policyNumberField_4.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        policyNumberField_4.setText("0");
+        policyNumberField_4.setToolTipText("");
+        policyNumberField_4.setBorder(null);
+        policyNumberField_4.setPreferredSize(new java.awt.Dimension(250, 35));
+
+        addPatientButton_4.setBackground(new java.awt.Color(39, 36, 142));
+        addPatientButton_4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        addPatientButton_4.setForeground(new java.awt.Color(255, 255, 255));
+        addPatientButton_4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/check.png"))); // NOI18N
+        addPatientButton_4.setText("BOOK");
+        addPatientButton_4.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(39, 36, 142)));
+        addPatientButton_4.setBorderPainted(false);
+        addPatientButton_4.setPreferredSize(new java.awt.Dimension(100, 40));
+        addPatientButton_4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addPatientButton_4ActionPerformed(evt);
+            }
+        });
+
+        resetButton_3.setBackground(new java.awt.Color(255, 0, 0));
+        resetButton_3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        resetButton_3.setForeground(new java.awt.Color(255, 255, 255));
+        resetButton_3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/reset.png"))); // NOI18N
+        resetButton_3.setText("RESET");
+        resetButton_3.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(255, 0, 0)));
+        resetButton_3.setBorderPainted(false);
+        resetButton_3.setPreferredSize(new java.awt.Dimension(100, 40));
+        resetButton_3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                resetButton_3ActionPerformed(evt);
+            }
+        });
+
+        insuranceCompanyField_5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        insuranceCompanyField_5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "<-- SELECT -->" }));
+        insuranceCompanyField_5.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                insuranceCompanyField_5ItemStateChanged(evt);
+            }
+        });
+
+        jLabel74.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel74.setForeground(new java.awt.Color(62, 69, 83));
+        jLabel74.setText("DOCTOR NAME");
+        jLabel74.setPreferredSize(new java.awt.Dimension(100, 20));
+
+        policyNumberField_5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        policyNumberField_5.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        policyNumberField_5.setToolTipText("");
+        policyNumberField_5.setBorder(null);
+        policyNumberField_5.setPreferredSize(new java.awt.Dimension(250, 35));
+
+        jLabel75.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel75.setForeground(new java.awt.Color(62, 69, 83));
+        jLabel75.setText("SYMPTOMS");
+        jLabel75.setPreferredSize(new java.awt.Dimension(100, 20));
+
+        addPatientButton_5.setBackground(new java.awt.Color(39, 36, 142));
+        addPatientButton_5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        addPatientButton_5.setForeground(new java.awt.Color(255, 255, 255));
+        addPatientButton_5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/search.png"))); // NOI18N
+        addPatientButton_5.setText("SEARCH");
+        addPatientButton_5.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(39, 36, 142)));
+        addPatientButton_5.setBorderPainted(false);
+        addPatientButton_5.setPreferredSize(new java.awt.Dimension(100, 40));
+        addPatientButton_5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addPatientButton_5ActionPerformed(evt);
+            }
+        });
+
+        usersList_1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4", "Title 5"
+            }
+        ));
+        usersList_1.setPreferredSize(new java.awt.Dimension(350, 80));
+        jScrollPane2.setViewportView(usersList_1);
+
+        jLabel76.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel76.setForeground(new java.awt.Color(62, 69, 83));
+        jLabel76.setText("RECENTLY ADDED PATIENTS");
+        jLabel76.setPreferredSize(new java.awt.Dimension(100, 20));
+
+        javax.swing.GroupLayout bookAppointmentPanel_Layout = new javax.swing.GroupLayout(bookAppointmentPanel_);
+        bookAppointmentPanel_.setLayout(bookAppointmentPanel_Layout);
+        bookAppointmentPanel_Layout.setHorizontalGroup(
+            bookAppointmentPanel_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(bookAppointmentPanel_Layout.createSequentialGroup()
+                .addGap(75, 75, 75)
+                .addGroup(bookAppointmentPanel_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bookAppointmentPanel_Layout.createSequentialGroup()
+                        .addGroup(bookAppointmentPanel_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(policyNumberField_5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jSeparator10)
+                            .addGroup(bookAppointmentPanel_Layout.createSequentialGroup()
+                                .addGroup(bookAppointmentPanel_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bookAppointmentPanel_Layout.createSequentialGroup()
+                                        .addGroup(bookAppointmentPanel_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(policyNumberField_4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jLabel73, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addGap(75, 75, 75))
+                                    .addGroup(bookAppointmentPanel_Layout.createSequentialGroup()
+                                        .addGroup(bookAppointmentPanel_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(insuranceCompanyField_4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel72, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                .addGroup(bookAppointmentPanel_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(insuranceCompanyField_5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel74, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(bookAppointmentPanel_Layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addGroup(bookAppointmentPanel_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(bookAppointmentPanel_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(jLabel27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addGroup(bookAppointmentPanel_Layout.createSequentialGroup()
+                                            .addGroup(bookAppointmentPanel_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(firstNameField_3, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(fatherNameField_3, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGap(75, 75, 75)
+                                            .addGroup(bookAppointmentPanel_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(bookAppointmentPanel_Layout.createSequentialGroup()
+                                                    .addGroup(bookAppointmentPanel_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(middleNameField_3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addGap(75, 75, 75)
+                                                    .addGroup(bookAppointmentPanel_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(lastNameField_3, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addComponent(addPatientButton_5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(jSeparator9, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(bookAppointmentPanel_Layout.createSequentialGroup()
+                                        .addComponent(resetButton_3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(30, 30, 30)
+                                        .addComponent(addPatientButton_4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGap(75, 75, 75))
+                    .addGroup(bookAppointmentPanel_Layout.createSequentialGroup()
+                        .addGroup(bookAppointmentPanel_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel75, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel76, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+        );
+        bookAppointmentPanel_Layout.setVerticalGroup(
+            bookAppointmentPanel_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(bookAppointmentPanel_Layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(jSeparator9, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
+                .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addGroup(bookAppointmentPanel_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(firstNameField_3, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(addPatientButton_5, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(bookAppointmentPanel_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(bookAppointmentPanel_Layout.createSequentialGroup()
+                        .addGroup(bookAppointmentPanel_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(bookAppointmentPanel_Layout.createSequentialGroup()
+                                .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, 0)
+                                .addComponent(fatherNameField_3, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(bookAppointmentPanel_Layout.createSequentialGroup()
+                                .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, 0)
+                                .addComponent(middleNameField_3, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(bookAppointmentPanel_Layout.createSequentialGroup()
+                                .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, 0)
+                                .addComponent(lastNameField_3, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(50, 50, 50)
+                        .addComponent(jSeparator10, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30)
+                        .addGroup(bookAppointmentPanel_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bookAppointmentPanel_Layout.createSequentialGroup()
+                                .addComponent(jLabel72, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(35, 35, 35))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bookAppointmentPanel_Layout.createSequentialGroup()
+                                .addComponent(jLabel73, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, 0)
+                                .addGroup(bookAppointmentPanel_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(policyNumberField_4, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(insuranceCompanyField_4, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addGroup(bookAppointmentPanel_Layout.createSequentialGroup()
+                        .addComponent(jLabel74, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(35, 35, 35))
+                    .addComponent(insuranceCompanyField_5, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addComponent(jLabel75, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(policyNumberField_5, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(bookAppointmentPanel_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(bookAppointmentPanel_Layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addGroup(bookAppointmentPanel_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(addPatientButton_4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(resetButton_3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bookAppointmentPanel_Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel76, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)))
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30))
+        );
+
+        parentPanel.add(bookAppointmentPanel_, "card2");
 
         addPatientPanel_.setBackground(new java.awt.Color(226, 235, 241));
         addPatientPanel_.setPreferredSize(new java.awt.Dimension(1050, 800));
@@ -611,12 +899,18 @@ public class HelpDeskPage extends javax.swing.JFrame {
 
         insuranceCompanyField_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         insuranceCompanyField_.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "<-- SELECT -->", "RELIGARE", "MAX BUPA", "BHARTI AXA", "BAJAJ ALLIANZ" }));
+        insuranceCompanyField_.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                insuranceCompanyField_ItemStateChanged(evt);
+            }
+        });
 
         jLabel19.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(62, 69, 83));
         jLabel19.setText("POLICY NUMBER");
         jLabel19.setPreferredSize(new java.awt.Dimension(100, 20));
 
+        policyNumberField_.setEditable(false);
         policyNumberField_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         policyNumberField_.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         policyNumberField_.setToolTipText("");
@@ -822,7 +1116,7 @@ public class HelpDeskPage extends javax.swing.JFrame {
                         .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, 0)
                         .addComponent(bloodGroupField_, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(48, 48, 48)
+                .addGap(50, 50, 50)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
                 .addGroup(addPatientPanel_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -835,7 +1129,7 @@ public class HelpDeskPage extends javax.swing.JFrame {
                         .addGroup(addPatientPanel_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(policyNumberField_, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(insuranceCompanyField_, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 107, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 105, Short.MAX_VALUE)
                 .addGroup(addPatientPanel_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(addPatientButton_, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(resetButton_, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -844,357 +1138,6 @@ public class HelpDeskPage extends javax.swing.JFrame {
 
         parentPanel.add(addPatientPanel_, "card2");
         addPatientPanel_.getAccessibleContext().setAccessibleName("");
-
-        bookAppointmentPanel_.setBackground(new java.awt.Color(226, 235, 241));
-        bookAppointmentPanel_.setPreferredSize(new java.awt.Dimension(1050, 800));
-
-        jLabel22.setFont(new java.awt.Font("Algerian", 1, 24)); // NOI18N
-        jLabel22.setForeground(new java.awt.Color(62, 69, 83));
-        jLabel22.setText("book appointment");
-
-        jLabel23.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel23.setForeground(new java.awt.Color(62, 69, 83));
-        jLabel23.setText("FIRST NAME");
-        jLabel23.setPreferredSize(new java.awt.Dimension(100, 20));
-
-        firstNameField_1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        firstNameField_1.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        firstNameField_1.setToolTipText("");
-        firstNameField_1.setBorder(null);
-        firstNameField_1.setPreferredSize(new java.awt.Dimension(250, 35));
-
-        jLabel24.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel24.setForeground(new java.awt.Color(62, 69, 83));
-        jLabel24.setText("MIDDLE NAME");
-        jLabel24.setPreferredSize(new java.awt.Dimension(100, 20));
-
-        middleNameField_1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        middleNameField_1.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        middleNameField_1.setToolTipText("");
-        middleNameField_1.setBorder(null);
-        middleNameField_1.setPreferredSize(new java.awt.Dimension(250, 35));
-
-        jLabel25.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel25.setForeground(new java.awt.Color(62, 69, 83));
-        jLabel25.setText("LAST NAME");
-        jLabel25.setPreferredSize(new java.awt.Dimension(100, 20));
-
-        lastNameField_1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        lastNameField_1.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        lastNameField_1.setToolTipText("");
-        lastNameField_1.setBorder(null);
-        lastNameField_1.setPreferredSize(new java.awt.Dimension(250, 35));
-
-        jLabel26.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel26.setForeground(new java.awt.Color(62, 69, 83));
-        jLabel26.setText("FATHER'S NAME");
-        jLabel26.setPreferredSize(new java.awt.Dimension(100, 20));
-
-        fatherNameField_1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        fatherNameField_1.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        fatherNameField_1.setToolTipText("");
-        fatherNameField_1.setBorder(null);
-        fatherNameField_1.setPreferredSize(new java.awt.Dimension(250, 35));
-
-        jLabel27.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel27.setForeground(new java.awt.Color(62, 69, 83));
-        jLabel27.setText("GENDER");
-        jLabel27.setPreferredSize(new java.awt.Dimension(100, 20));
-
-        genderField_1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        genderField_1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "<-- SELECT -->", "MALE", "FEMALE", "OTHER" }));
-
-        addressField_1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        addressField_1.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        addressField_1.setToolTipText("");
-        addressField_1.setBorder(null);
-        addressField_1.setPreferredSize(new java.awt.Dimension(250, 35));
-
-        jLabel28.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel28.setForeground(new java.awt.Color(62, 69, 83));
-        jLabel28.setText("PERMANENT ADDRESS ");
-        jLabel28.setPreferredSize(new java.awt.Dimension(100, 20));
-
-        jLabel29.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel29.setForeground(new java.awt.Color(62, 69, 83));
-        jLabel29.setText("DATE OF BIRTH");
-        jLabel29.setPreferredSize(new java.awt.Dimension(100, 20));
-
-        phoneNumberField_1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        phoneNumberField_1.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        phoneNumberField_1.setToolTipText("");
-        phoneNumberField_1.setBorder(null);
-        phoneNumberField_1.setPreferredSize(new java.awt.Dimension(250, 35));
-
-        jLabel30.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel30.setForeground(new java.awt.Color(62, 69, 83));
-        jLabel30.setText("PHONE NO");
-        jLabel30.setPreferredSize(new java.awt.Dimension(100, 20));
-
-        jLabel31.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel31.setForeground(new java.awt.Color(62, 69, 83));
-        jLabel31.setText("WEIGHT");
-        jLabel31.setPreferredSize(new java.awt.Dimension(100, 20));
-
-        weightField_1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        weightField_1.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        weightField_1.setToolTipText("");
-        weightField_1.setBorder(null);
-        weightField_1.setPreferredSize(new java.awt.Dimension(250, 35));
-
-        jLabel32.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel32.setForeground(new java.awt.Color(62, 69, 83));
-        jLabel32.setText("HEIGHT");
-        jLabel32.setPreferredSize(new java.awt.Dimension(100, 20));
-
-        heightField_1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        heightField_1.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        heightField_1.setToolTipText("");
-        heightField_1.setBorder(null);
-        heightField_1.setPreferredSize(new java.awt.Dimension(250, 35));
-
-        jLabel33.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel33.setForeground(new java.awt.Color(62, 69, 83));
-        jLabel33.setText("BLOOD GROUP");
-        jLabel33.setPreferredSize(new java.awt.Dimension(100, 20));
-
-        bloodGroupField_1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        bloodGroupField_1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "<-- SELECT -->", "A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-" }));
-
-        jLabel34.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel34.setForeground(new java.awt.Color(62, 69, 83));
-        jLabel34.setText("INSURANCE COMPANY");
-        jLabel34.setPreferredSize(new java.awt.Dimension(100, 20));
-
-        insuranceCompanyField_1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        insuranceCompanyField_1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "<-- SELECT -->", "RELIGARE", "MAX BUPA", "BHARTI AXA", "BAJAJ ALLIANZ" }));
-
-        jLabel35.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel35.setForeground(new java.awt.Color(62, 69, 83));
-        jLabel35.setText("POLICY NUMBER");
-        jLabel35.setPreferredSize(new java.awt.Dimension(100, 20));
-
-        policyNumberField_1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        policyNumberField_1.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        policyNumberField_1.setToolTipText("");
-        policyNumberField_1.setBorder(null);
-        policyNumberField_1.setPreferredSize(new java.awt.Dimension(250, 35));
-
-        addPatientButton_1.setBackground(new java.awt.Color(39, 36, 142));
-        addPatientButton_1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        addPatientButton_1.setForeground(new java.awt.Color(255, 255, 255));
-        addPatientButton_1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/addUser.png"))); // NOI18N
-        addPatientButton_1.setText("ADD");
-        addPatientButton_1.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(39, 36, 142)));
-        addPatientButton_1.setBorderPainted(false);
-        addPatientButton_1.setPreferredSize(new java.awt.Dimension(100, 40));
-        addPatientButton_1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addPatientButton_1ActionPerformed(evt);
-            }
-        });
-
-        jLabel36.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel36.setForeground(new java.awt.Color(62, 69, 83));
-        jLabel36.setText("EMAIL ID");
-        jLabel36.setPreferredSize(new java.awt.Dimension(100, 20));
-
-        eMailIdField_1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        eMailIdField_1.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        eMailIdField_1.setToolTipText("");
-        eMailIdField_1.setBorder(null);
-        eMailIdField_1.setPreferredSize(new java.awt.Dimension(250, 35));
-
-        usernameField_1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        usernameField_1.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        usernameField_1.setToolTipText("");
-        usernameField_1.setBorder(null);
-        usernameField_1.setPreferredSize(new java.awt.Dimension(250, 35));
-
-        jLabel37.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel37.setForeground(new java.awt.Color(62, 69, 83));
-        jLabel37.setText("USERNAME");
-        jLabel37.setPreferredSize(new java.awt.Dimension(100, 20));
-
-        dobField_1.setBackground(new java.awt.Color(51, 51, 51));
-        dobField_1.setForeground(new java.awt.Color(255, 255, 255));
-        dobField_1.setDateFormatString("dd-mm-yyyy");
-
-        resetButton_1.setBackground(new java.awt.Color(255, 0, 0));
-        resetButton_1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        resetButton_1.setForeground(new java.awt.Color(255, 255, 255));
-        resetButton_1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/reset.png"))); // NOI18N
-        resetButton_1.setText("RESET");
-        resetButton_1.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(255, 0, 0)));
-        resetButton_1.setBorderPainted(false);
-        resetButton_1.setPreferredSize(new java.awt.Dimension(100, 40));
-        resetButton_1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                resetButton_1ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout bookAppointmentPanel_Layout = new javax.swing.GroupLayout(bookAppointmentPanel_);
-        bookAppointmentPanel_.setLayout(bookAppointmentPanel_Layout);
-        bookAppointmentPanel_Layout.setHorizontalGroup(
-            bookAppointmentPanel_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(bookAppointmentPanel_Layout.createSequentialGroup()
-                .addGap(75, 75, 75)
-                .addGroup(bookAppointmentPanel_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jSeparator4)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, bookAppointmentPanel_Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(bookAppointmentPanel_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(bookAppointmentPanel_Layout.createSequentialGroup()
-                                .addGroup(bookAppointmentPanel_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bookAppointmentPanel_Layout.createSequentialGroup()
-                                        .addGroup(bookAppointmentPanel_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(weightField_1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(75, 75, 75)
-                                        .addGroup(bookAppointmentPanel_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(heightField_1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(policyNumberField_1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(eMailIdField_1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(phoneNumberField_1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(bookAppointmentPanel_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(bookAppointmentPanel_Layout.createSequentialGroup()
-                                        .addGap(75, 75, 75)
-                                        .addGroup(bookAppointmentPanel_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(bloodGroupField_1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bookAppointmentPanel_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(usernameField_1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(bookAppointmentPanel_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jLabel22, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(bookAppointmentPanel_Layout.createSequentialGroup()
-                                    .addGroup(bookAppointmentPanel_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(firstNameField_1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(fatherNameField_1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGap(75, 75, 75)
-                                    .addGroup(bookAppointmentPanel_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(middleNameField_1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(dobField_1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addGap(75, 75, 75)
-                                    .addGroup(bookAppointmentPanel_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(lastNameField_1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(genderField_1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(addressField_1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(bookAppointmentPanel_Layout.createSequentialGroup()
-                                .addComponent(resetButton_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(30, 30, 30)
-                                .addComponent(addPatientButton_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, bookAppointmentPanel_Layout.createSequentialGroup()
-                        .addGroup(bookAppointmentPanel_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(insuranceCompanyField_1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel34, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addGap(75, 75, 75))
-        );
-        bookAppointmentPanel_Layout.setVerticalGroup(
-            bookAppointmentPanel_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(bookAppointmentPanel_Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addGroup(bookAppointmentPanel_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(bookAppointmentPanel_Layout.createSequentialGroup()
-                        .addGroup(bookAppointmentPanel_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(bookAppointmentPanel_Layout.createSequentialGroup()
-                                .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(middleNameField_1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(bookAppointmentPanel_Layout.createSequentialGroup()
-                                .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(20, 20, 20)
-                                .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(firstNameField_1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(bookAppointmentPanel_Layout.createSequentialGroup()
-                                .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(lastNameField_1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(30, 30, 30)
-                        .addGroup(bookAppointmentPanel_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(bookAppointmentPanel_Layout.createSequentialGroup()
-                                .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(fatherNameField_1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(bookAppointmentPanel_Layout.createSequentialGroup()
-                                .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(genderField_1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(bookAppointmentPanel_Layout.createSequentialGroup()
-                        .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(dobField_1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(7, 7, 7)))
-                .addGap(30, 30, 30)
-                .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(addressField_1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addGroup(bookAppointmentPanel_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(usernameField_1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(bookAppointmentPanel_Layout.createSequentialGroup()
-                        .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addGroup(bookAppointmentPanel_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(phoneNumberField_1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(eMailIdField_1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(bookAppointmentPanel_Layout.createSequentialGroup()
-                        .addGroup(bookAppointmentPanel_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(35, 35, 35)))
-                .addGap(30, 30, 30)
-                .addGroup(bookAppointmentPanel_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bookAppointmentPanel_Layout.createSequentialGroup()
-                        .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(weightField_1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bookAppointmentPanel_Layout.createSequentialGroup()
-                        .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(heightField_1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bookAppointmentPanel_Layout.createSequentialGroup()
-                        .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(bloodGroupField_1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(48, 48, 48)
-                .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
-                .addGroup(bookAppointmentPanel_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bookAppointmentPanel_Layout.createSequentialGroup()
-                        .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(35, 35, 35))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bookAppointmentPanel_Layout.createSequentialGroup()
-                        .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addGroup(bookAppointmentPanel_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(policyNumberField_1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(insuranceCompanyField_1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 107, Short.MAX_VALUE)
-                .addGroup(bookAppointmentPanel_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(addPatientButton_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(resetButton_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30))
-        );
-
-        parentPanel.add(bookAppointmentPanel_, "card2");
 
         managePatientPanel_.setBackground(new java.awt.Color(226, 235, 241));
         managePatientPanel_.setPreferredSize(new java.awt.Dimension(1050, 800));
@@ -1569,6 +1512,11 @@ public class HelpDeskPage extends javax.swing.JFrame {
             }
         });
         jScrollPane1.setViewportView(usersList_);
+        if (usersList_.getColumnModel().getColumnCount() > 0) {
+            usersList_.getColumnModel().getColumn(5).setHeaderValue("Title 6");
+            usersList_.getColumnModel().getColumn(6).setHeaderValue("Title 7");
+            usersList_.getColumnModel().getColumn(7).setHeaderValue("Title 8");
+        }
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -1787,8 +1735,8 @@ public class HelpDeskPage extends javax.swing.JFrame {
                     .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(130, 130, 130)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(101, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(288, Short.MAX_VALUE))
         );
 
         parentPanel.add(dashboardPanel_, "card2");
@@ -1820,10 +1768,6 @@ public class HelpDeskPage extends javax.swing.JFrame {
     private void managePatientTab_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_managePatientTab_ActionPerformed
         // TODO add your handling code here:
         changeButtonAndIcon(managePatientTab_, "manage");
-        parentPanel.removeAll();
-       // parentPanel.add(managePatientPanel_);
-        parentPanel.repaint();
-        parentPanel.revalidate();
     }//GEN-LAST:event_managePatientTab_ActionPerformed
 
     private void addPatientTab_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addPatientTab_ActionPerformed
@@ -1881,12 +1825,6 @@ public class HelpDeskPage extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton8ActionPerformed
 
-    private void bookAppointmentTab_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bookAppointmentTab_ActionPerformed
-        // TODO add your handling code here:
-        changeButtonAndIcon(bookAppointmentTab_, "appointment");
-        
-    }//GEN-LAST:event_bookAppointmentTab_ActionPerformed
-
     private void resetButton_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetButton_2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_resetButton_2ActionPerformed
@@ -1895,17 +1833,9 @@ public class HelpDeskPage extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_addPatientButton_2ActionPerformed
 
-    private void resetButton_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetButton_1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_resetButton_1ActionPerformed
-
-    private void addPatientButton_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addPatientButton_1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_addPatientButton_1ActionPerformed
-
     private void resetButton_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetButton_ActionPerformed
         // TODO add your handling code here:
-        resetAddPatientForm();
+        resetAllForms();
     }//GEN-LAST:event_resetButton_ActionPerformed
 
     private void usernameField_FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_usernameField_FocusLost
@@ -1955,13 +1885,136 @@ public class HelpDeskPage extends javax.swing.JFrame {
         } catch(Exception err) {
             JOptionPane.showInternalMessageDialog(null, err);
         }
-        resetAddPatientForm();
+        resetAllForms();
 
     }//GEN-LAST:event_addPatientButton_ActionPerformed
 
     private void usersList_ComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_usersList_ComponentShown
         // TODO add your handling code here:
     }//GEN-LAST:event_usersList_ComponentShown
+
+    private void bookAppointmentTab_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bookAppointmentTab_ActionPerformed
+        // TODO add your handling code here:
+        changeButtonAndIcon(bookAppointmentTab_, "appointment");
+        pageToShow(bookAppointmentPanel_);
+        
+        //Adding doctors in combobox;
+        if(insuranceCompanyField_5.getItemCount() == 1) {
+            try{
+                Connection con = ConnectionProvider.getCon();
+                Statement st = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+                String query = "Select CONCAT(First_Name , \" \",Last_Name  ) as Names from USER_DETAILS where user_role='doctor'";
+                ResultSet rs = st.executeQuery(query);
+                while(rs.next()) {
+                    String name = rs.getString("Names");
+                    insuranceCompanyField_5.addItem(name);
+                }
+                con.close();
+            } catch(Exception err) {
+                JOptionPane.showInternalMessageDialog(null, err);
+            }
+        }
+        
+        //update data in table;
+        try{
+            Connection con = ConnectionProvider.getCon();
+            Statement st = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            String query = "SELECT entry_no,patient_Id,doctor_id,ward_type,symptoms FROM appointment";
+            ResultSet rs = st.executeQuery(query); 
+            //usersList_.setAutoResizeMode(usersList_.AUTO_RESIZE_OFF);
+            usersList_1.setModel(DbUtils.resultSetToTableModel(rs));
+             
+        } catch(Exception err) {
+            JOptionPane.showInternalMessageDialog(null, err);
+        }
+    }//GEN-LAST:event_bookAppointmentTab_ActionPerformed
+
+    private void insuranceCompanyField_ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_insuranceCompanyField_ItemStateChanged
+        // TODO add your handling code here:
+        if(insuranceCompanyField_.getSelectedIndex() != 0) {
+            policyNumberField_.setEditable(true);
+        } else {
+            policyNumberField_.setEditable(false);
+        }
+    }//GEN-LAST:event_insuranceCompanyField_ItemStateChanged
+
+    private void resetButton_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetButton_3ActionPerformed
+        // TODO add your handling code here:
+        resetAllForms();
+    }//GEN-LAST:event_resetButton_3ActionPerformed
+
+    private void addPatientButton_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addPatientButton_4ActionPerformed
+        // TODO add your handling code here:
+        String patientID = firstNameField_3.getText();
+        String wardType = (String)insuranceCompanyField_4.getSelectedItem();
+        String wardBill = policyNumberField_4.getText();
+        String symptoms = policyNumberField_5.getText();
+        try{
+            Connection con = ConnectionProvider.getCon();
+            Statement st = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            String query = "INSERT INTO appointment (`PATIENT_ID`, `DOCTOR_ID`, `WARD_TYPE`, `WARD_BILL`, `SYMPTOMS`) VALUES ('"+patientID+"', '"+doctorID+"', '"+wardType+"', '"+wardBill+"', '"+symptoms+"')";
+
+            st.executeUpdate(query);
+            JOptionPane.showInternalConfirmDialog(null, "APPOINTMENT BOOKED SUCCESSFULLY", "BOOK APPOINTMENT",JOptionPane.PLAIN_MESSAGE);
+            con.close();
+        } catch(Exception err) {
+            JOptionPane.showInternalMessageDialog(null, err);
+        }
+        
+        resetAllForms();
+        
+    }//GEN-LAST:event_addPatientButton_4ActionPerformed
+
+    private void insuranceCompanyField_4ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_insuranceCompanyField_4ItemStateChanged
+        // TODO add your handling code here:
+        int fees = insuranceCompanyField_4.getSelectedIndex();
+        if(fees==0) policyNumberField_4.setText("0");
+        if(fees==1) policyNumberField_4.setText("350");
+        if(fees==2) policyNumberField_4.setText("500");
+    }//GEN-LAST:event_insuranceCompanyField_4ItemStateChanged
+
+    String doctorID = "";
+    private void insuranceCompanyField_5ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_insuranceCompanyField_5ItemStateChanged
+        // TODO add your handling code here:
+        if(insuranceCompanyField_5.getSelectedIndex() !=0) {
+           String name = (String) insuranceCompanyField_5.getSelectedItem();
+           String[] fnl = name.split(" ");
+           String first = fnl[0];
+           String last = fnl[1];
+            try{
+                Connection con = ConnectionProvider.getCon();
+                Statement st = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+                String query = "Select user_id from USER_DETAILS where first_name ='"+first+"' and last_name = '"+last+"' and user_role='doctor'";
+                ResultSet rs = st.executeQuery(query);
+                rs.next();
+                doctorID = rs.getString("USER_ID");
+            } catch(Exception err) {
+                JOptionPane.showInternalMessageDialog(null, err);
+            }
+        }
+        
+    }//GEN-LAST:event_insuranceCompanyField_5ItemStateChanged
+
+    private void addPatientButton_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addPatientButton_5ActionPerformed
+        // TODO add your handling code here:
+        String patientID = firstNameField_3.getText();
+        try{
+            Connection con = ConnectionProvider.getCon();
+            Statement st = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            
+            String query = "SELECT user_id,first_name,last_name,phone_no FROM user_details where user_role='patient' and user_id='"+patientID+"'";
+            ResultSet rs = st.executeQuery(query); 
+            if(!rs.first()) {
+            JOptionPane.showInternalConfirmDialog(null, "PATIENT ID NOT FOUND", "SEARCH PATIENT",JOptionPane.PLAIN_MESSAGE);
+            } else {
+                fatherNameField_3.setText(rs.getString("FIRST_NAME"));
+                middleNameField_3.setText(rs.getString("LAST_NAME"));
+                lastNameField_3.setText(rs.getString("PHONE_NO"));
+            }
+        } catch(Exception err) {
+            JOptionPane.showInternalMessageDialog(null, err);
+        }
+    }//GEN-LAST:event_addPatientButton_5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -2001,15 +2054,14 @@ public class HelpDeskPage extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addPatientButton_;
-    private javax.swing.JButton addPatientButton_1;
     private javax.swing.JButton addPatientButton_2;
+    private javax.swing.JButton addPatientButton_4;
+    private javax.swing.JButton addPatientButton_5;
     private javax.swing.JPanel addPatientPanel_;
     private javax.swing.JButton addPatientTab_;
     private javax.swing.JTextField addressField_;
-    private javax.swing.JTextField addressField_1;
     private javax.swing.JTextField addressField_2;
     private javax.swing.JComboBox<String> bloodGroupField_;
-    private javax.swing.JComboBox<String> bloodGroupField_1;
     private javax.swing.JComboBox<String> bloodGroupField_2;
     private javax.swing.JPanel bookAppointmentPanel_;
     private javax.swing.JButton bookAppointmentTab_;
@@ -2017,26 +2069,23 @@ public class HelpDeskPage extends javax.swing.JFrame {
     private javax.swing.JButton dashBoardTab_;
     private javax.swing.JPanel dashboardPanel_;
     private com.toedter.calendar.JDateChooser dobField_;
-    private com.toedter.calendar.JDateChooser dobField_1;
     private com.toedter.calendar.JDateChooser dobField_2;
     private javax.swing.JTextField eMailIdField_;
-    private javax.swing.JTextField eMailIdField_1;
     private javax.swing.JTextField eMailIdField_2;
     private javax.swing.JTextField fatherNameField_;
-    private javax.swing.JTextField fatherNameField_1;
     private javax.swing.JTextField fatherNameField_2;
+    private javax.swing.JTextField fatherNameField_3;
     private javax.swing.JTextField firstNameField_;
-    private javax.swing.JTextField firstNameField_1;
     private javax.swing.JTextField firstNameField_2;
+    private javax.swing.JTextField firstNameField_3;
     private javax.swing.JComboBox<String> genderField_;
-    private javax.swing.JComboBox<String> genderField_1;
     private javax.swing.JComboBox<String> genderField_2;
     private javax.swing.JTextField heightField_;
-    private javax.swing.JTextField heightField_1;
     private javax.swing.JTextField heightField_2;
     private javax.swing.JComboBox<String> insuranceCompanyField_;
-    private javax.swing.JComboBox<String> insuranceCompanyField_1;
     private javax.swing.JComboBox<String> insuranceCompanyField_2;
+    private javax.swing.JComboBox<String> insuranceCompanyField_4;
+    private javax.swing.JComboBox<String> insuranceCompanyField_5;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel1;
@@ -2053,23 +2102,12 @@ public class HelpDeskPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel32;
-    private javax.swing.JLabel jLabel33;
-    private javax.swing.JLabel jLabel34;
-    private javax.swing.JLabel jLabel35;
-    private javax.swing.JLabel jLabel36;
-    private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
@@ -2103,6 +2141,11 @@ public class HelpDeskPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel66;
     private javax.swing.JLabel jLabel67;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel72;
+    private javax.swing.JLabel jLabel73;
+    private javax.swing.JLabel jLabel74;
+    private javax.swing.JLabel jLabel75;
+    private javax.swing.JLabel jLabel76;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
@@ -2110,44 +2153,44 @@ public class HelpDeskPage extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator10;
     private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JSeparator jSeparator3;
-    private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSeparator jSeparator7;
+    private javax.swing.JSeparator jSeparator9;
     private javax.swing.JButton labReportTab_;
     private javax.swing.JTextField lastNameField_;
-    private javax.swing.JTextField lastNameField_1;
     private javax.swing.JTextField lastNameField_2;
+    private javax.swing.JTextField lastNameField_3;
     private javax.swing.JButton logoutButton_;
     private javax.swing.JPanel managePatientPanel_;
     private javax.swing.JButton managePatientTab_;
     private javax.swing.JTextField middleNameField_;
-    private javax.swing.JTextField middleNameField_1;
     private javax.swing.JTextField middleNameField_2;
+    private javax.swing.JTextField middleNameField_3;
     private javax.swing.JPanel navBarPanel;
     private javax.swing.JPanel parentPanel;
     private javax.swing.JButton patientHistoryTab_;
     private javax.swing.JTextField phoneNumberField_;
-    private javax.swing.JTextField phoneNumberField_1;
     private javax.swing.JTextField phoneNumberField_2;
     private javax.swing.JTextField policyNumberField_;
-    private javax.swing.JTextField policyNumberField_1;
     private javax.swing.JTextField policyNumberField_2;
+    private javax.swing.JTextField policyNumberField_4;
+    private javax.swing.JTextField policyNumberField_5;
     private javax.swing.JButton resetButton_;
-    private javax.swing.JButton resetButton_1;
     private javax.swing.JButton resetButton_2;
+    private javax.swing.JButton resetButton_3;
     private javax.swing.JButton sendAmbulanceTab_;
     private javax.swing.JLabel totalPatientLabel_;
     private javax.swing.JLabel userDP;
     private javax.swing.JTextField usernameField_;
-    private javax.swing.JTextField usernameField_1;
     private javax.swing.JTextField usernameField_2;
     private javax.swing.JTable usersList_;
+    private javax.swing.JTable usersList_1;
     private javax.swing.JTextField weightField_;
-    private javax.swing.JTextField weightField_1;
     private javax.swing.JTextField weightField_2;
     // End of variables declaration//GEN-END:variables
 

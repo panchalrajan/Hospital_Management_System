@@ -9,6 +9,15 @@ package com.mycompany.erp;
  *
  * @author color
  */
+
+/*
+** Assumptioms **
+
+1 -> Doctor Names are Unique (Just for now) why??
+Jcombo get doctor's name dynamically, so I can't retrive doctor id
+
+ */
+
 public class ERP {
 
     public static void main(String[] args) {
